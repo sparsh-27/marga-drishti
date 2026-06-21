@@ -180,3 +180,15 @@
     @apply bg-background text-foreground;}
   html {
     @apply font-sans;}}
+@media print {
+  @page { size: A4; margin: 12mm; }
+  body { background: white !important; }
+  [data-slot="sidebar"],
+  [data-sidebar="sidebar"],
+  [data-sidebar="trigger"],
+  header,
+  nav,
+  .print\:hidden { display: none !important; }
+  #exec-print-root { max-width: none !important; padding: 0 !important; }
+  .shadow-md, .shadow-sm, .shadow-lg { box-shadow: none !important; }
+}
